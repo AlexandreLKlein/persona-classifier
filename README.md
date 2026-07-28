@@ -1,6 +1,8 @@
 # 🍺 Persona Classifier
 
-_Live demo: not yet deployed -- see [Deployment](#deployment) below._
+Checkout the [Live Demo](https://persona-classifier.alexandre.dev/)
+
+API Docs [Live Demo](https://persona-classifier.alexandre.dev/api/docs)
 
 A from-scratch, synthetic-data reimplementation of a nightly customer-scoring job I
 built for a real taproom's POS system, rebuilt standalone in Python + Vue because the
@@ -12,7 +14,7 @@ original behavioral personas -- with a fully transparent, explainable breakdown 
 ## Why this exists
 
 The real system (part of a brewery/taproom ERP I built and maintain) runs a nightly
-batch job that scores every customer against a set of behavioral personas -- useful for
+batch job that scores every customer against a set of behavioral personas, useful for
 staff to spot, at a glance, who's a high-frequency regular versus who mostly shows up
 for events. That real job can't be open-sourced: its persona taxonomy and scoring
 weights are the brewery's own business logic, and the data behind it is real customer
@@ -22,14 +24,6 @@ This project rebuilds the *idea* from scratch and in the open: an original five-
 taxonomy I designed independently (different names, different weights, no relationship
 to the real system), scored against 100% synthetic, seed-generated data. Nothing here
 is the brewery's proprietary logic, and no real customer ever appears in this repo.
-
-**Why the personas here are safe to publish, unlike a public style guide:** a project
-in the same portfolio ([`beer-style-classifier`](https://github.com/AlexandreLKlein/beer-style-classifier))
-classifies beers against the BJCP style guidelines -- a public, published standard, so
-reimplementing it isn't a confidentiality question. Customer personas have no public
-standard to point to; the taxonomy below is original work, built independently for this
-project, with a synthetic dataset generated specifically so no real business or
-customer data is ever at risk.
 
 ## How scoring works
 
