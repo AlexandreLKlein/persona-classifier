@@ -67,19 +67,28 @@ watch([selectedPersona, sort], load)
     <div class="flex flex-wrap items-center gap-3 mb-5">
       <select
         v-model="selectedPersona"
-        class="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white"
+        class="bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white"
+        style="color-scheme: dark"
       >
-        <option value="">All personas (rank by top persona)</option>
-        <option v-for="p in personaStore.personas" :key="p.key" :value="p.key">{{ p.name }}</option>
+        <option value="" class="bg-slate-800 text-white">All personas (rank by top persona)</option>
+        <option
+          v-for="p in personaStore.personas"
+          :key="p.key"
+          :value="p.key"
+          class="bg-slate-800 text-white"
+        >
+          {{ p.name }}
+        </option>
       </select>
 
       <select
         v-model="sort"
-        class="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white"
+        class="bg-slate-800 border border-white/10 rounded-lg px-3 py-2 text-sm text-white"
+        style="color-scheme: dark"
       >
-        <option value="score_desc">Score: high to low</option>
-        <option value="score_asc">Score: low to high</option>
-        <option value="name_asc">Name: A-Z</option>
+        <option value="score_desc" class="bg-slate-800 text-white">Score: high to low</option>
+        <option value="score_asc" class="bg-slate-800 text-white">Score: low to high</option>
+        <option value="name_asc" class="bg-slate-800 text-white">Name: A-Z</option>
       </select>
 
       <button
