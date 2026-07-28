@@ -1,0 +1,23 @@
+# Python
+backend/.venv/
+backend/**/__pycache__/
+backend/*.db
+backend/.pytest_cache/
+backend/.ruff_cache/
+*.pyc
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Env
+.env
+!.env.example
+frontend/.env
+!frontend/.env.example
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
