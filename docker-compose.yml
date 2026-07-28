@@ -13,7 +13,7 @@ services:
     build:
       context: ./frontend
       args:
-        VITE_API_BASE_URL: https://persona-classifier.alexandre.dev/api
+        VITE_API_BASE_URL: https://persona-classifier.alexandre.dev
     ports:
       - "5173:80"
     depends_on:
